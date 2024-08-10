@@ -33,4 +33,4 @@ with picamera.PiCamera() as camera:
    
     cv.waitKey(0)
     cv.destroyAllWindows()
-    #ぴ
+    #ぴーーーーーーーーーーーーーーーーーーー
