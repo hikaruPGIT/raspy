@@ -35,4 +35,5 @@ with picamera.PiCamera() as camera:
     cv.destroyAllWindows()
     #ぴーーーーーーーーーーーーーーーーーーー
         # https://sozorablog.com/camera_shooting/
+    #gepkgep
 
