@@ -36,4 +36,5 @@ with picamera.PiCamera() as camera:
     #ぴーーーーーーーーーーーーーーーーーーー
         # https://sozorablog.com/camera_shooting/
     #gepkgep
+    #oidjfoia
 
