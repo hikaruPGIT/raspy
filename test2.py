@@ -19,6 +19,7 @@ while True:
     cv2.imshow('題名', frame)
     #escキーで終了
     if cv2.waitKey(1) == 27:
+        cv2.imwrite("sinnyuusya.jpg", frame)
         break
  
 writer.release()
