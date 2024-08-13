@@ -9,4 +9,4 @@ def LINE(inputtoken):
     files = {'imageFile': open("sinnyuusya.jpg", "rb")}
     message =  "侵入者あり。画像をかくにんしてください！！" 
     payload = {"message" :  message} 
-    r = requests.post(url, headers = headers, params=payload)
+    r = requests.post(url, headers = headers, params=payload, files=files)
