@@ -3,6 +3,8 @@
 import cv2
 import numpy as np
 import LINE
+import datetime
+
 token=input("トークン入力：")
 cap = cv2.VideoCapture(0)#カメラチャンネルを指定する
  
@@ -20,9 +22,11 @@ while True:
     #escキーで終了
     if cv2.waitKey(1) == 27:
         cv2.imwrite("sinnyuusya.jpg", frame)
+        dt_now=datetime.datetime.now()
+        Discovery_time = dt_now.strftime('%Y年%m月%d日%H時%M分%S秒')
         break
  
 writer.release()
 cap.release()
 cv2.destroyAllWindows()
-LINE.LINE(token)
+LINE.LINE(token,Discovery_time)
