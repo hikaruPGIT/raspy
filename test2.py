@@ -2,7 +2,8 @@
 
 import cv2
 import numpy as np
- 
+import LINE
+token=input("トークン入力：")
 cap = cv2.VideoCapture(0)#カメラチャンネルを指定する
  
 fmt = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')#動画保存の際の、コーデックを指定する
@@ -23,3 +24,4 @@ while True:
 writer.release()
 cap.release()
 cv2.destroyAllWindows()
+LINE.LINE(token)
