@@ -7,6 +7,6 @@ def LINE(inputtoken,Discov_time):
     print("とーくんは"+token)
     headers = {"Authorization" : "Bearer "+ token} 
     files = {'imageFile': open("sinnyuusya.jpg", "rb")}
-    message =  Discov_time+"侵入者あり。画像をかくにんしてください！！" 
+    message =  Discov_time+"侵入者あり。画像を確認してください！！" 
     payload = {"message" :  message} 
     r = requests.post(url, headers = headers, params=payload, files=files)
