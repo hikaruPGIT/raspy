@@ -1,22 +1,34 @@
 #カメラ映像を表示する＋動画ファイルに保存するプログラム
-
 import cv2
 import numpy as np
 import LINE
 import datetime
 
-token=input("トークン入力：")
-cap = cv2.VideoCapture(0)#カメラチャンネルを指定する
- 
-fmt = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')#動画保存の際の、コーデックを指定する
-fps = 20.0#リフレッシュレート
-size = (640, 360)#解像度
+#標準入力からトークンを取得
+token = input("トークン入力：")
+
+#カメラチャンネルを指定する
+cap = cv2.VideoCapture(0)
+
+#動画保存の際の、コーデックを指定する
+fmt = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
+
+#リフレッシュレート
+fps = 20.0
+
+#解像度
+size = (640, 360)
+
+#インスタンスの作成
 writer = cv2.VideoWriter('test.m4v', fmt, fps, size)
- 
+
+#escキーを押すまで動画撮影
 while True:
-    _, frame = cap.read()#戻り値の片方は使用しない
+    #戻り値の片方は使用しない
+    _, frame = cap.read()
     frame = cv2.resize(frame, size)
-    writer.write(frame)#writerに１フレーム分追加
+    #writerに１フレーム分追加
+    writer.write(frame)
      
     cv2.imshow('題名', frame)
     #escキーで終了

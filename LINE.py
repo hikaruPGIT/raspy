@@ -1,10 +1,10 @@
-# LINEに通知を送るプログラム
-
+#LINEに通知を送るプログラム
 import requests
+
 def LINE(inputtoken,Discov_time):
     url = "https://notify-api.line.me/api/notify" 
     token = inputtoken
-    print("とーくんは"+token)
+    print("入力されたトークン："+token)
     headers = {"Authorization" : "Bearer "+ token} 
     files = {'imageFile': open("sinnyuusya.jpg", "rb")}
     message =  Discov_time+"侵入者あり。画像を確認してください！！" 
